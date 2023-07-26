@@ -1,0 +1,13 @@
+.chessboard {
+  display: grid;
+  grid-template: repeat(8, 78px) / repeat(8, 78px);
+}
+
+.square {
+  width: 78px;
+  height: 78px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
