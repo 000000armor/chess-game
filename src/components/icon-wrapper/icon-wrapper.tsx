@@ -1,7 +1,7 @@
-import React from 'react';
-import { SvgElement } from '../../typings/general';
+import React, { ReactElement } from 'react';
+import { SvgElement } from '@/types/general';
 
-export const IconWrapper = ({ icon }: { icon: SvgElement }) => {
+export const IconWrapper = ({ icon }: { icon: SvgElement }): ReactElement => {
   const Icon = icon;
 
   return <Icon />;

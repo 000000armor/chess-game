@@ -1,6 +1,63 @@
-.chessboard {
-  display: grid;
-  place-self: center;
-  grid-template-columns: 10px 1fr;
+.board-wrapper {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 2px solid #000;
 }
 
+.board-layer {
+  display: grid;
+  grid-template-columns: repeat(8, 75px);
+  grid-template-rows: repeat(8, 75px);
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  background-color: #dee3e6;
+}
+
+.field:nth-child(-2n + 8),
+.field:nth-child(8) ~ div:nth-child(-2n + 15),
+.field:nth-child(17) ~ div:nth-child(-2n + 24),
+.field:nth-child(24) ~ div:nth-child(-2n + 31),
+.field:nth-child(32) ~ div:nth-child(-2n + 40),
+.field:nth-child(40) ~ div:nth-child(-2n + 47),
+.field:nth-child(48) ~ div:nth-child(-2n + 56),
+.field:nth-child(56) ~ div:nth-child(-2n + 63) {
+  background-color: #8ca1ad;
+  color: #ffffff;
+}
+
+.pieces-layer {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+}
+
+.piece {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 75px;
+  height: 75px;
+}
+
+.piece.black {
+  color: #000;
+}
+
+.piece.white {
+  color: #fff;
+}

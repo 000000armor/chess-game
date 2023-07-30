@@ -1,12 +1,7 @@
 import React from 'react';
-import { Board } from './components/board';
+import { Board } from '@components/board';
+import './app.styles.css';
 
-const App = () => {
-  return (
-    <div style={{ display: 'grid' }}>
-      <Board />
-    </div>
-  );
+export const App = () => {
+  return <Board />;
 };
-
-export default App;
