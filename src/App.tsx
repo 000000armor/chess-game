@@ -1,10 +1,10 @@
 import React from 'react';
-import { Chessboard } from './components/chessboard';
+import { Board } from './components/board';
 
 const App = () => {
   return (
-    <div>
-      <Chessboard />
+    <div style={{ display: 'grid' }}>
+      <Board />
     </div>
   );
 };

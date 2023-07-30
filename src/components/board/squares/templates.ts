@@ -1,0 +1,48 @@
+import { Squares } from '../../../types/general';
+
+export const squaresTemplate: Squares = [
+  [
+    ['white', 'rook'],
+    ['white', 'knight'],
+    ['white', 'bishop'],
+    ['white', 'king'],
+    ['white', 'queen'],
+    ['white', 'bishop'],
+    ['white', 'knight'],
+    ['white', 'rook'],
+  ],
+  [
+    ['white', 'pawn'],
+    ['white', 'pawn'],
+    ['white', 'pawn'],
+    ['white', 'pawn'],
+    ['white', 'pawn'],
+    ['white', 'pawn'],
+    ['white', 'pawn'],
+    ['white', 'pawn'],
+  ],
+  [null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null],
+  [null, null, null, null, null, null, null, null],
+  [
+    ['black', 'pawn'],
+    ['black', 'pawn'],
+    ['black', 'pawn'],
+    ['black', 'pawn'],
+    ['black', 'pawn'],
+    ['black', 'pawn'],
+    ['black', 'pawn'],
+    ['black', 'pawn'],
+  ],
+  [
+    ['black', 'rook'],
+    ['black', 'knight'],
+    ['black', 'bishop'],
+    ['black', 'king'],
+    ['black', 'queen'],
+    ['black', 'bishop'],
+    ['black', 'knight'],
+    ['black', 'rook'],
+  ],
+];

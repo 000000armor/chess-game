@@ -1,0 +1,4 @@
+.files-wrapper {
+  display: grid;
+  grid-template: 1fr / repeat(8, 78px);
+}

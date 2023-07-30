@@ -1,0 +1,6 @@
+.chessboard {
+  display: grid;
+  place-self: center;
+  grid-template-columns: 10px 1fr;
+}
+
