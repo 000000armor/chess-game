@@ -25,7 +25,6 @@ export const PiecesLayer = () => {
               <IconWrapper icon={piece.icon} />
             </div>
           ))}
-          S
         </div>
       )}
     </Observer>
