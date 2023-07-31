@@ -1,9 +1,11 @@
 import { piecesIcons } from '@/templates/pieces';
-import { Side, SvgElement } from '@/utils/types';
-import { Piece } from '@entities/piece/piece';
+import { PiecesRecord, Side, SvgElement, Piece } from '@/utils/types';
+import { Piece as PieceClass } from '@entities/piece/piece';
 
-export class Knight extends Piece {
+export class Knight extends PieceClass {
   icon: SvgElement;
+  name: Piece = PiecesRecord['knight'];
+
   constructor(side: Side, posX: number, posY: number) {
     super(side, posX, posY);
     this.icon = piecesIcons[side].knight;

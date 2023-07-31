@@ -6,6 +6,7 @@ import { makeAutoObservable } from 'mobx';
 
 export class Game implements GameInterface {
   pieces: PieceInstance[] = [];
+  selectedPiece: PieceInstance | null = null;
 
   constructor() {
     makeAutoObservable(this);
@@ -20,7 +21,19 @@ export class Game implements GameInterface {
       new Knight('white', 6, 7),
     );
   }
-  selectPiece() {}
+
+  selectPiece(piece: PieceInstance) {
+    if (
+      piece.side === this.selectedPiece?.side &&
+      piece.name === this.selectedPiece?.name
+    ) {
+      this.selectedPiece = null;
+      return;
+    }
+
+    this.selectedPiece = piece;
+  }
+
   showPossibleMoves() {}
 }
 

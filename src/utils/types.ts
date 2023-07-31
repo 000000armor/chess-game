@@ -6,7 +6,17 @@ export type Side = 'white' | 'black';
 export type SvgElement = FunctionComponent<
   SVGProps<SVGSVGElement> & { title?: string | undefined }
 >;
-type Piece = 'rook' | 'knight' | 'bishop' | 'queen' | 'king' | 'pawn';
+
+export const PiecesRecord = {
+  rook: 'rook',
+  knight: 'knight',
+  bishop: 'bishop',
+  queen: 'queen',
+  king: 'king',
+  pawn: 'pawn',
+} as const;
+
+export type Piece = (typeof PiecesRecord)[keyof typeof PiecesRecord];
 
 export type PieceInstance = Knight;
 

@@ -1,4 +1,8 @@
+import { PieceInstance } from '@/utils/types';
+
 export interface GameInterface {
+  pieces: PieceInstance[];
+  selectedPiece: PieceInstance | null;
   startGame(): void;
-  pieces: any[];
+  selectPiece: (piece: PieceInstance) => void;
 }
