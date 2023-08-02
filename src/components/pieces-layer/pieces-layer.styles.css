@@ -1,0 +1,27 @@
+.pieces-layer {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+}
+
+.piece {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 75px;
+  height: 75px;
+}
+
+.piece.black {
+  color: #000;
+}
+
+.piece.white {
+  color: #fff;
+}
+
+.piece.selected {
+  background-color: #7d9c84;
+}

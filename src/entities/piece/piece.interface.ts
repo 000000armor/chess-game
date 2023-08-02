@@ -4,5 +4,7 @@ export interface PieceInterface {
   side: Side;
   posX: number;
   posY: number;
-  captured: boolean;
+  isCaptured: boolean;
+  move(): void;
+  showPossibleMoves(): void;
 }
