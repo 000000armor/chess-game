@@ -1,4 +1,4 @@
-import { Knight } from '@/entities/pieces';
+import { Knight, Pawn } from '@/entities/pieces';
 import { FunctionComponent, SVGProps } from 'react';
 
 export const PiecesRecord = {
@@ -23,7 +23,7 @@ export type SvgElement = FunctionComponent<
 
 export type Piece = (typeof PiecesRecord)[keyof typeof PiecesRecord];
 
-export type PieceInstance = Knight;
+export type PieceInstance = Knight | Pawn;
 
 type PiecesRecord = Record<Piece, SvgElement>;
 
