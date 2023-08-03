@@ -8,25 +8,23 @@ import './pieces-layer.styles.css';
 export const PiecesLayer = observer(() => {
   const game = useGame();
 
-  const isPieceSelected = (
-    selectedPiece: PieceInstance | null,
-    piece: PieceInstance,
-  ) => selectedPiece === piece && selectedPiece.isSelected;
-
-  const handlePieceClick = (piece: PieceInstance) => () => {};
+  const handlePieceClick = (piece: PieceInstance) => () => {
+    game.selectPiece(piece);
+  };
 
   return (
     <Observer>
       {() => (
-        <div className='pieces-layer'>
+        <div className={`pieces-layer ${game.isFlipped ? 'rotate' : ''}`}>
           {game.pieces.map(piece => (
             <div
               key={`${piece.posX}-${piece.posY}`}
-              className={`piece ${piece.side}`}
+              className={`piece ${piece.side} ${
+                piece.isSelected ? 'selected' : ''
+              } ${game.isFlipped ? 'rotate' : ''}`}
               style={{ top: 75 * piece.posY, left: 75 * piece.posX }}
               onClick={handlePieceClick(piece)}
             >
-              {console.log(piece.isSelected)}
               <IconWrapper icon={piece.icon} />
             </div>
           ))}
