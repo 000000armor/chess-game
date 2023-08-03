@@ -1,0 +1,15 @@
+.possible-moves-layer {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+}
+
+.possible-move {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 75px;
+  height: 75px;
+}
