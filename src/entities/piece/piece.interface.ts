@@ -6,5 +6,4 @@ export interface PieceInterface {
   posY: number;
   isCaptured: boolean;
   move(): void;
-  showPossibleMoves(): void;
 }

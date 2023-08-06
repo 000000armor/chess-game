@@ -13,23 +13,19 @@ export const PiecesLayer = observer(() => {
   };
 
   return (
-    <Observer>
-      {() => (
-        <div className={`pieces-layer ${game.isFlipped ? 'rotate' : ''}`}>
-          {game.pieces.map(piece => (
-            <div
-              key={`${piece.posX}-${piece.posY}`}
-              className={`piece ${piece.side} ${
-                piece.isSelected ? 'selected' : ''
-              } ${game.isFlipped ? 'rotate' : ''}`}
-              style={{ top: 75 * piece.posY, left: 75 * piece.posX }}
-              onClick={handlePieceClick(piece)}
-            >
-              <IconWrapper icon={piece.icon} />
-            </div>
-          ))}
+    <div className={`pieces-layer ${game.isFlipped ? 'rotate' : ''}`}>
+      {game.pieces.map(piece => (
+        <div
+          key={`${piece.posX}-${piece.posY}`}
+          className={`piece ${piece.side} ${
+            piece.isSelected ? 'selected' : ''
+          } ${game.isFlipped ? 'rotate' : ''}`}
+          style={{ top: 75 * piece.posY, left: 75 * piece.posX }}
+          onClick={handlePieceClick(piece)}
+        >
+          <IconWrapper icon={piece.icon} />
         </div>
-      )}
-    </Observer>
+      ))}
+    </div>
   );
 });

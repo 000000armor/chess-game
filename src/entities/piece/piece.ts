@@ -17,7 +17,6 @@ export abstract class Piece implements PieceInterface {
       isCaptured: observable,
       isSelected: observable,
       move: action,
-      showPossibleMoves: action,
     });
     this.side = side;
     this.posX = posX;
@@ -30,5 +29,4 @@ export abstract class Piece implements PieceInterface {
     this.isSelected = !this.isSelected;
   }
   move() {}
-  showPossibleMoves() {}
 }

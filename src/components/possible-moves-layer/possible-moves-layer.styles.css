@@ -2,6 +2,11 @@
   position: absolute;
   width: 600px;
   height: 600px;
+  z-index: 1;
+}
+
+.possible-moves-layer.rotate {
+  transform: rotateX(180deg);
 }
 
 .possible-move {
@@ -12,4 +17,14 @@
   cursor: pointer;
   width: 75px;
   height: 75px;
+}
+
+.possible-move:after {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  opacity: 0.5;
+  background-color: green;
 }
