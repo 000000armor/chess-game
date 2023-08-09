@@ -41,7 +41,7 @@ export class Game implements GameInterface {
       new Rook(SidesRecord.black, 0, 0),
       new Rook(SidesRecord.black, 7, 0),
       new Bishop(SidesRecord.white, 2, 7),
-      new Bishop(SidesRecord.white, 5, 7),
+      new Bishop(SidesRecord.white, 3, 3),
       new Bishop(SidesRecord.black, 2, 0),
       new Bishop(SidesRecord.black, 5, 0),
       new Queen(SidesRecord.white, 3, 7),
@@ -74,6 +74,13 @@ export class Game implements GameInterface {
 
   flipBoard() {
     this.isFlipped = !this.isFlipped;
+  }
+
+  get possibleMoves(): number[][] {
+    const possibleMovesRaw = this.selectedPiece?.possibleMoves;
+    if (!possibleMovesRaw) return [];
+
+    return possibleMovesRaw;
   }
 }
 

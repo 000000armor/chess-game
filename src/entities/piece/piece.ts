@@ -29,4 +29,6 @@ export abstract class Piece implements PieceInterface {
     this.isSelected = !this.isSelected;
   }
   move() {}
+
+  abstract get possibleMoves(): number[][];
 }

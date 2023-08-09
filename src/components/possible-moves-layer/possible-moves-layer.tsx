@@ -9,7 +9,7 @@ export const PossibleMovesLayer = observer(() => {
 
   return (
     <div className={`possible-moves-layer ${game.isFlipped ? 'rotate' : ''}`}>
-      {game.selectedPiece?.possibleMoves.map(possibleMove => (
+      {game.possibleMoves.map(possibleMove => (
         <div
           className='possible-move'
           style={{
